@@ -1,8 +1,10 @@
 #include "Account.hpp"
 
 // Constructors
-Account::Account(int inital_deposit)
+Account::Account(int id, int value)
 {
+    this->id = id;
+    this->id = value;
 	std::cout << "\e[0;33mDefault Constructor called of Account\e[0m" << std::endl;
 }
 
@@ -26,4 +28,18 @@ Account & Account::operator=(const Account &assign)
 	(void) assign;
 	return *this;
 }
+
+// Metodos
+
+const int& Account::getId() const
+{
+    return (id);
+}
+
+const int& Account::getValue() const
+{
+    return(value);
+}
+
+
 

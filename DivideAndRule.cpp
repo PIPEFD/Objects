@@ -6,7 +6,7 @@
 /*   By: dbonilla <dbonilla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/28 20:34:19 by dbonilla          #+#    #+#             */
-/*   Updated: 2026/09/28 20:34:20 by dbonilla         ###   ########.fr       */
+/*   Updated: 2026/09/29 20:45:27 by dbonilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,8 +58,13 @@ int main()
 {
 	Account accountA = Account();
 	accountA.id = 0;
-	accountA.value = 100;
-
+    accountA.value = 100;
+    
+    Account accountC = Account();
+    accountC.id = 0;
+    accountC.value = 100;
+    
+    
 	Account accountB = Account();
 	accountB.id = 1;
 	accountB.value = 100;
@@ -68,6 +73,7 @@ int main()
 	bank.liquidity = 999;
 	bank.clientAccounts.push_back(&accountA);
 	bank.clientAccounts.push_back(&accountB);
+    bank.clientAccounts.push_back(&accountC);
 
 	bank.liquidity -= 200;
 	accountA.value += 400;
@@ -80,6 +86,8 @@ int main()
 
 	std::cout << "Bank : " << std::endl;
 	std::cout << bank << std::endl;
+    std::pair ;
 
 	return (0);
 }
+    
